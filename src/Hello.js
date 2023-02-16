@@ -1,31 +1,28 @@
-import {useState} from "react";
+//State with Function
+import React,{Component} from "react";
+class Hello extends Component {
 
-function Hello(){
-    const [data,setData]=useState(0)
-    function updateData()
-    {
-        setData(data+1)
+    constructor() {
+        super();
+        this.state={
+            data:1
+        }
     }
-    console.warn("______________");
-    // let data="Vrushali Makwana";
-    // function Apple()
-    // {
-    //     //function called
-    //     data="welcome";
-    //     alert(data);
-    // }
-    return (
-        <div className="Hello">
+    apple()
+    {
+        this.setState({data:this.state.data+1})
+    }
+    render()
+    {
+        return (
             <center>
-            <h1>{data}</h1>
-            {/*<User/>*/}
-
-            {/*    {Apple()}*/}
-            {/*   <User3/>*/}
-                <button onClick={updateData}>updateData</button>
+                <div className="hello">
+                    <h1>{this.state.data}</h1>
+                    <button onClick={()=>this.apple()}>Update Data</button>
+                </div>
             </center>
-        </div>
-    );
-}
 
+        );
+    }
+}
 export default Hello;
