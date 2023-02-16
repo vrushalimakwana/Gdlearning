@@ -1,16 +1,17 @@
 //State with Function
-import React,{Component} from "react";
-class Hello extends Component {
+import React from "react";
+import User4 from "./User4";
+class Hello extends React.Component {
 
     constructor() {
         super();
         this.state={
-            data:1
+            data:"Vrushali"
         }
     }
     apple()
     {
-        this.setState({data:this.state.data+1})
+        this.setState({data:"Welcome"})
     }
     render()
     {
