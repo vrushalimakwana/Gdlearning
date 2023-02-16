@@ -1,24 +1,28 @@
-import React from "react";
-import User3 from "./User3";
-//import User from "./User";
-//import User2 from "./User2";
+import {useState} from "react";
+
 function Hello(){
+    const [data,setData]=useState(0)
+    function updateData()
+    {
+        setData(data+1)
+    }
+    console.warn("______________");
+    // let data="Vrushali Makwana";
     // function Apple()
     // {
-    //     return(
-    //         <div>
-    //             Apple Component
-    //         </div>
-    //     )
+    //     //function called
+    //     data="welcome";
+    //     alert(data);
     // }
     return (
         <div className="Hello">
             <center>
-            <h1>hello world</h1>
+            <h1>{data}</h1>
             {/*<User/>*/}
 
             {/*    {Apple()}*/}
-                <User3/>
+            {/*   <User3/>*/}
+                <button onClick={updateData}>updateData</button>
             </center>
         </div>
     );
