@@ -1,13 +1,10 @@
-//Function Component
-function User()
-{
-    return(
-        <div>
-            <h1>User Component</h1>
-            <h1>Hello</h1>
+function User(){
+    return (
+        <div className="User">
+            <h1>Get Input Box value !</h1>
+            <input type="text"/>
         </div>
-
-    )
+    );
 }
 
 export default User;
